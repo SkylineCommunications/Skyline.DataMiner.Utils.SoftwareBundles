@@ -1,49 +1,49 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-	<PropertyGroup>
-		<TargetFramework>net462</TargetFramework>
-		<AssemblyName>Skyline.DataMiner.Utils.SoftwareBundles</AssemblyName>
-		<RootNamespace>Skyline.DataMiner.Utils.SoftwareBundles</RootNamespace>
-		<GenerateDocumentationFile>True</GenerateDocumentationFile>
-		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-		<Authors>SkylineCommunications</Authors>
-		<Company>Skyline Communications</Company>
-		<PackageId>Skyline.DataMiner.Utils.SoftwareBundles</PackageId>
-		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
-		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-		<PackageTags>Skyline;DataMiner</PackageTags>
-		<PackageProjectUrl>https://skyline.be/</PackageProjectUrl>
-		<Description>
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>Skyline.DataMiner.Utils.SoftwareBundles</AssemblyName>
+    <RootNamespace>Skyline.DataMiner.Utils.SoftwareBundles</RootNamespace>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Authors>SkylineCommunications</Authors>
+    <Company>Skyline Communications</Company>
+    <PackageId>Skyline.DataMiner.Utils.SoftwareBundles</PackageId>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <PackageTags>Skyline;DataMiner</PackageTags>
+    <PackageProjectUrl>https://skyline.be/</PackageProjectUrl>
+    <Description>
 			SoftwareBundles are a bundled set of files with versioning on them.
 			Code Entry Point:
 			var zippedSoftwareBundle = SoftwareBundles.GetZippedSoftwareBundle(softwareBundleLocation);
 		</Description>
-		<PackageIcon>Icon.png</PackageIcon>
-		<PackageReadmeFile>README.md</PackageReadmeFile>
-	</PropertyGroup>
-	<ItemGroup>
-	  <Compile Remove="Exceptions\**" />
-	  <EmbeddedResource Remove="Exceptions\**" />
-	  <None Remove="Exceptions\**" />
-	</ItemGroup>
-	<ItemGroup>
-		<None Include="..\_NuGetItems\LICENSE.txt">
-			<Pack>True</Pack>
-			<PackagePath>\</PackagePath>
-		</None>
-		<None Include="..\_NuGetItems\Icon.png">
-			<Pack>True</Pack>
-			<PackagePath>\</PackagePath>
-		</None>
-		<None Update="README.md">
-			<Pack>True</Pack>
-			<PackagePath>\</PackagePath>
-		</None>
-	</ItemGroup>
-	<ItemGroup>
-		<InternalsVisibleTo Include="$(MSBuildProjectName).Unit Tests" />
-	</ItemGroup>
-	<ItemGroup>
-		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-		<PackageReference Include="NuGet.Versioning" Version="6.7.0" />
-	</ItemGroup>
+    <PackageIcon>Icon.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Exceptions\**" />
+    <EmbeddedResource Remove="Exceptions\**" />
+    <None Remove="Exceptions\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\_NuGetItems\LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\_NuGetItems\Icon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <InternalsVisibleTo Include="$(MSBuildProjectName).Unit Tests" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="NuGet.Versioning" Version="6.7.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
 </Project>
